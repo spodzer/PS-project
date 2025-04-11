@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Product Listing - PlayStation Legacy</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="adminscripts/products.js" defer></script>
+</head>
+<body>
+
+    <!-- admin header & nav -->
+    <header class="admin-navbar">
+        <a href="index.html" class="logo">
+            <img src="images/spinningplaystation.gif" alt="PlayStation Legacy Logo">
+        </a>
+        <nav>
+            <a href="admin-upload.html">Bulk Upload</a>
+            <a href="admin-products.html">Product Listing</a>
+            <a href="logout.html">Sign Out</a>
+        </nav>
+    </header>
+
+    <div class="admin-container">
+        <h1>Product Listing</h1>
+        
+        <input type="text" id="search" placeholder="Search products..." onkeyup="filterProducts()">
+        
+        <table id="product-list">
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- where products will be dynamically inserted -->
+            </tbody>
+        </table>
+
+        <button id="add-product-btn" onclick="location.href='product-edit.html'">Add New Product</button>
+    </div>
+
+
+</body>
+</html>

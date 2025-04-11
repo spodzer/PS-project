@@ -1,0 +1,36 @@
+/* admin navbar */
+.admin-navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.admin-navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.admin-navbar a:hover {
+    text-decoration: underline;
+}
+
+/* admin cont */
+.admin-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

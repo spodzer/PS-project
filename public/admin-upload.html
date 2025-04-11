@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Bulk Upload - PlayStation Legacy</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="adminscripts/upload.js" defer></script>
+</head>
+<body>
+
+    <!-- admin & nav -->
+    <header class="admin-navbar">
+        <a href="index.html" class="logo">
+            <img src="images/spinningplaystation.gif" alt="PlayStation Legacy Logo">
+        </a>
+        <nav>
+            <a href="admin-upload.html">Bulk Upload</a>
+            <a href="admin-products.html">Product Listing</a>
+            <a href="logout.html">Sign Out</a>
+        </nav>
+    </header>
+
+    <div class="admin-container">
+        <h1>Bulk Upload Products</h1>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="product-file">Choose a file to upload (JSON, CSV):</label>
+            <input type="file" id="product-file" name="product-file" accept=".json, .csv" required>
+            <button type="submit">Upload File</button>
+        </form>
+
+        <div class="instructions">
+            <h2>File Format Instructions:</h2>
+            <p>Upload a file in JSON or CSV format with the following attributes for each product:</p>
+            <ul>
+                <li><strong>Name</strong></li>
+                <li><strong>Description</strong></li>
+                <li><strong>Category</strong></li>
+                <li><strong>Price</strong></li>
+                <li><strong>Image Path</strong></li>
+            </ul>
+
+            <h3>Example JSON Format:</h3>
+            <pre>
+[
+    {
+        "name": "Game Name",
+        "description": "Game Description",
+        "category": "Game Category",
+        "price": 59.99,
+        "image_path": "path/to/image.jpg"
+    }
+]
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

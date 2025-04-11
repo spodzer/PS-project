@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Edit - PlayStation Legacy</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="adminscripts/edit.js" defer></script>
+</head>
+<body>
+
+    <!-- admin / nav -->
+    <header class="admin-navbar">
+        <a href="index.html" class="logo">
+            <img src="images/spinningplaystation.gif" alt="PlayStation Legacy Logo">
+        </a>
+        <nav>
+            <a href="admin-upload.html">Bulk Upload</a>
+            <a href="admin-products.html">Product Listing</a>
+            <a href="logout.html">Sign Out</a>
+        </nav>
+    </header>
+
+    <div class="admin-container">
+        <h1>Edit Product</h1>
+
+        <form id="product-edit-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="Game 1" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required>Game description</textarea>
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" value="Action" required>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" value="59.99" required>
+
+            <label for="image">Image Path:</label>
+            <input type="text" id="image" name="image" value="images/game1.jpg" required>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+</body>
+</html>
